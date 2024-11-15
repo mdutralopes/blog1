@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Livros do Marcos" %>
+
+<h1>Livros do Marcos</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Mostrar esse livro", post %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Novo livro", new_post_path %>
